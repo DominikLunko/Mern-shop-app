@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({click}) => {
     return (
         <nav className="navbar">
-            {/* Logo */}
+            
             <div className="navbar__logo">
                 <h2>MERN Shopping Cart</h2>
             </div>
