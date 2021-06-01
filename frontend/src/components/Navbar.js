@@ -1,9 +1,11 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+
+import {removeProductDetails} from '../redux/actions/productActions';
 
 const Navbar = ({click}) => {
-
+    const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
 
@@ -15,7 +17,9 @@ const Navbar = ({click}) => {
         <nav className="navbar">
             
             <div className="navbar__logo">
-                <h2>MERN Shopping Cart</h2>
+                <Link to="/" onClick={() => dispatch(removeProductDetails())}>
+                <h2>PHONE SHOP</h2>
+                </Link>
             </div>
 
             <ul className="navbar__links">

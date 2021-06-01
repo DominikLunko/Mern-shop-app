@@ -15,7 +15,7 @@ const ProductScreen = ({ match, history}) => {
     const productDetails = useSelector(state => state.getProductDetails);
     const { loading, error, product } = productDetails;
 
-
+    console.log(product)
     useEffect(() => {
         if(product && match.params.id !== product._id) {
             dispatch(getProductDetails(match.params.id));
